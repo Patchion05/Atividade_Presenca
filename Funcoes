@@ -1,0 +1,36 @@
+function validateForm() {
+  var nome = document.getElementById("nome").value;
+  var email = document.getElementById("email").value;
+  var senha = document.getElementById("senha").value;
+  var error = false;
+
+  if (nome === "") {
+    document.getElementById("nomeError").innerText =
+      "Por favor, insira seu nome.";
+    error = true;
+  } else {
+    document.getElementById("nomeError").innerText = "";
+  }
+
+  if (email === "") {
+    document.getElementById("emailError").innerText =
+      "Por favor, insira seu email.";
+    error = true;
+  } else {
+    document.getElementById("emailError").innerText = "";
+  }
+
+  if (senha === "") {
+    document.getElementById("senhaError").innerText =
+      "Por favor, insira sua senha.";
+    error = true;
+  } else {
+    document.getElementById("senhaError").innerText = "";
+  }
+
+  if (error) {
+    return false;
+  } else {
+    return true;
+  }
+}
